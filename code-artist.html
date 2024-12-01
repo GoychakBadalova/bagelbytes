@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Name Surname 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <nav>
+            <img src="media/ada_logo_color.png">
+            <a href="./index.html">Home</a>
+            <a href="./team-members.html">Team Members</a>
+            <a href="./hour-of-code.html">Hour of Code</a>
+            <a href="./web-project.html">Website Project</a>
+            <a href="./code-artist.html">CodeArt</a>
+            <div class="animation"></div>
+        </nav>
+        <div style="text-align:center" class="container">
+            <canvas id="art-canvas" width="640" height="480">
+                Sorry ... your browser doesn't support the HTML5 canvas element.
+            </canvas>  
+            <article>
+                <p>Algorithmic art is a unique way of creating art using computers and codes. Instead of drawing or painting by hand, artists write programs that tell the computer how to generate images. These programs follow specific steps, called algorithms, to create patterns, shapes, and designs. One popular tool for this is JavaScript, a programming language often used for making interactive art and animations. This kind of art combines creativity with technology, making it possible to create visuals that are detailed, unique, and sometimes even interactive. It’s like using math and programming as tools to make art.</p>
+            </article>      
+        </div>
+
+    
+        <footer class="footer">
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/team01_site/profilecard/?igsh=MWtkazZ2cW1lNTJnMw=="><img class="footerlogo" src="media/pngwing.com.png"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>    
+
+        <script type="text/javascript">
+            // Get reference to the 2D context of the canvas
+            let canvas = document.getElementById("art-canvas");
+            let context = canvas.getContext("2d");
+            // Set the color for drawing lines using red, green and blue components
+            // context.strokeStyle = 'rgb(255, 0, 0)';
+            context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+            DrawSpiral(context);
+        </script>
+    </body>
+</html>
